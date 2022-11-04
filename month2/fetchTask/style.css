@@ -1,0 +1,54 @@
+
+
+table,th,td{
+border: 2px solid black;
+}
+
+#detailForm{
+    margin: 50px;
+}
+
+.delete-btn{
+  background-color: lightsalmon;
+  border-radius: 5px;
+}
+
+tr:hover{
+  background-color: lightsalmon;
+}
+
+#logInForm{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+}
+
+#loginBtn{
+  width: 125px;
+  background-color: lightblue;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+#container,#personalData{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+  align-items: center;
+}
+
+#addBtn{
+  width: 80px;
+  background-color: lightblue;
+  border-radius: 25px;
+}
+
+
+#personalData{
+  display: none;
+}
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            min-width: 100px;
+            min-height: 100px;
+            padding: 40px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="grandParent" style="background-color: white ;" >
+        <div id="parent" style="background-color: white ;" >
+            <div id="child" style="background-color: white ;"></div>
+        </div>
+    </div>
+    <div>
+        <button onclick="clickHandler()">Inline event</button>
+
+        <button id="handleBtn">Event Handler</button>
+        <button id="listenBtn">Event Listener</button>
+    
+    </div>
+   
+    <div>
+        <a href="https://google.com">www.google.com</a> <span>before preventdefault</span>
+    </div>
+
+    <div>
+        <a href="https://google.com" id="link">www.google.com</a> <span>after preventdefault</span>
+    </div>
+
+
+    
+    
+    <script>
+            //  event bubbling event capturing
+            //  stop propagation
+            //inline event listeners
+
+        document.write("<h2>Hello world</h2>")
+        let grandParent = document.querySelector("#grandParent");
+        let parent = document.querySelector("#parent");
+        let child = document.querySelector("#child");
+
+        grandParent.addEventListener("click",()=>{
+            grandParent.style.backgroundColor = "red"
+            console.log("grandParent");
+        },false)
+
+        parent.addEventListener("click",(e)=>{
+            parent.style.backgroundColor = "blue"
+            console.log("parent");
+        },false)
+
+        child.addEventListener("click",(e)=>{
+            // e.stopPropagation();
+            child.style.backgroundColor = "black"
+            console.log("child");
+        },false)
+
+        let handleBtn = document.querySelector('#handleBtn');
+        let listenBtn = document.querySelector('#listenBtn');
+
+        function clickHandler(){
+            console.log("inline first event ");
+        }
+        function clickHandler(){
+            console.log("inline second event")
+        }
+
+        handleBtn.onclick = ()=>{
+            console.log("handler first")
+        }
+        handleBtn.onclick = ()=>{
+            console.log("handler second")
+        }
+
+        listenBtn.addEventListener('click',()=>{
+            console.log("listner first");
+        })
+
+        listenBtn.addEventListener('click',()=>{
+            console.log("listner second");
+        })
+
+
+        let link = document.querySelector("#link").addEventListener('click',function(e){
+            e.preventdefault()
+        })
+
+     </script>
+</body>
+</html>
