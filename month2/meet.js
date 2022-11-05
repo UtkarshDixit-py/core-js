@@ -70,10 +70,10 @@ console.log(Number.isInteger(2))
 //add sign up with admin or user
 //identify log in with saved sign up data if it is user or admin
 
-//rread more about callback hell 
-//theoratical points for promises
-// promise vs callback //detail , when to use what ,which one came first.
-//benefits of promises
+//read more about callback hell --done
+//theoratical points for promises --done
+// promise vs callback //detail , when to use what ,which one came first.--done
+//benefits of promises --done
 //async await
 //compilation error 
 //what are parameters of Promise Object
