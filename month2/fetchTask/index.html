@@ -9,7 +9,21 @@
 </head>
 <body>
     <div id="container">
-        <div id="logInForm">
+        <div id="signupForm">
+            <label for="Name">Name</label>
+            <input type="text"id="SignupName">
+            <label for="Name">Email</label>
+            <input type="text"id="SignupMail">
+            <div>
+                <label for="admin">Admin</label>
+                <input type="checkbox" name="admin" id="admin">
+                <label for="User">User</label>
+                <input type="checkbox" name="user" id="user">
+            </div>
+            <button id="signupBtn">Sign In</button>
+
+        </div>
+        <div id="logInForm" style="display: none;">
             <label for="email">Email</label>
             <input type="text" placeholder="email">
             <label for="pasword">Password</label>

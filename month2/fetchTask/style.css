@@ -17,7 +17,7 @@ tr:hover{
   background-color: lightsalmon;
 }
 
-#logInForm{
+#logInForm ,#signupForm{
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -27,7 +27,7 @@ tr:hover{
   margin: 25px;
 }
 
-#loginBtn{
+#loginBtn , #signupBtn{
   width: 125px;
   background-color: lightblue;
   border-radius: 25px;

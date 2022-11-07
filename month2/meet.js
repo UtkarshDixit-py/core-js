@@ -70,15 +70,13 @@ console.log(Number.isInteger(2))
 //add sign up with admin or user
 //identify log in with saved sign up data if it is user or admin
 
-//read more about callback hell --done
+//read more about callback disadvantages --done
 //theoratical points for promises --done
-// promise vs callback //detail , when to use what ,which one came first.--done
+//promise vs callback //detail , when to use what ,which one came first.--done
 //benefits of promises --done
 //async await
-//compilation error 
 //what are parameters of Promise Object
-//ways to call promise, 
-//try "this" is scope , revise "this" in arrow function
+// revise "this" in arrow function
 
 let obj ={
     name:"utkarsh",
