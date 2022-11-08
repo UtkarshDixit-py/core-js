@@ -118,6 +118,197 @@ const object = {
 
 
 
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    
+        this.person = () => {
+            return `hi ${this.name} and ${this.age}`;
+        };
+    }
+    
+    let p12 = new Person("sankavi", 22);
+    console.log(p12.person,"-------------------------");
+
+     // function obj(name){
+//      constructor(name){
+//         this.name = name;
+//     }
+// }
+
+// var instance = new obj('utkarsh');
+// console.log(instance);
+
+
+// class obj(name){
+//         this.name = name
+// }
+
+// var instance = new obj('utkarsh');
+// console.log(instance);
+
+// let obj = {
+//     "name" : 'utkarsh',
+//     roll : 5151,
+//     abc : function abc(){
+//         console.log(this.name); 
+//     }
+// }
+
+// let obj2 ={
+//     address:"okokokoko",
+//     number:85595959,
+// }
+// console.log(obj.abc());
+
+        // '{ username : utkarsh}'
+
+// let converted = JSON.parse('{ "username" : "utkarsh"}');
+
+// let convertBack = JSON.stringify(converted)
+// console.log(converted);
+
+// console.log("converted back",convertBack)
+
+
+
+//programming question output below
+// [ [ 'address', 'okokok' ], [ 'number', 654546
+// ] ]
+
+
+//web apis in async JS
+//how make 2 objects into 1 combining both properties
+//how to find obj key is present or not
+//how to add key prop to obj syntax
+//methods vs functions
+//work on syntax/practice more programs
+//do promise combinators
+
+// var prop = "my Name";
+// console.log(obj["my Name"]);
+
+// var ans = obj.find('name');
+// console.log(ans);
+
+
+// console.log(obj);
+// delete(obj.name);
+// console.log(obj);
+
+
+// setTimeout(()=>{
+//     console.log("Abc");
+// },2000);
+// console.log("Abc2");
+
+
+// let promise = new Promise((resolve,reject)=>{
+//     // resolve('Resolved');
+//     reject("rejected");
+// })
+
+// promise
+//     .then((message)=>{
+//         console.log(message)
+//     })
+//     .catch((e)=>{
+//         console.log(e)
+//     })
+//     .catch(()=>{
+//         console.log("error")
+//     })
+
+
+// function hi() {
+//     console.log(this);
+// }
+// hi()
+
+
+// var abc=() => {
+//     console.log(this);
+// }
+// abc()
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+
+//     this.person = () => {
+//         return `hi ${this.name} and ${this.age}`;
+//     };
+// }
+
+// let p12 = new Person("sankavi", 22);
+// console.log(p12.person);
+
+
+function abc(){
+    let a = 10;
+    function xyz(){
+        console.log(a)
+    }
+    xyz()
+}
+abc()
+
+
+// let obj1={
+//     name : "utkarsh",
+//      function abc(){
+//         console.log(this.name);
+//     }
+// }
+
+
+
+// let obj2={
+//     name : "sankavi",
+    
+// }
+   
+// abc.call(obj2,"argument");
+// abc.apply(obj2,["obj","obj2"]);
+
+// var save = abc.bind(obj2,"argument");
+
+
+
+// console.log(obj2);
+
+
+// [1,2,3,4,5,5,5,5,6,6,6,7,2]
+
+// let arr = [1,2,3,4,5,5,5,5,6,6,6,7,2];
+// arr.sort();
+
+// let ans=[];
+
+// for(let i = 0; i < arr.length-1;i++){
+//     let pair = [];
+//     let count= 0;
+//       while(arr[i] == arr[i+1]){
+//         //   console.log("infinite");
+//             count++;
+//           pair.push[arr[i]]
+//           pair.push[count]
+//       }
+//   ans.push(pair);
+//   count=0;
+// }
+
+// console.log(ans)
+
+
+    
+    
+    
+   
+
+
+
+
 
 
 
