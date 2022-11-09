@@ -18,3 +18,6 @@ let Square2 = class{
 
 let s1 = new Square(5,5);
 console.log(s1)
+
+
+

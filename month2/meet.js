@@ -161,7 +161,7 @@ const object = {
 // }
 // console.log(obj.abc());
 
-        // '{ username : utkarsh}'
+        // '{username : utkarsh}'
 
 // let converted = JSON.parse('{ "username" : "utkarsh"}');
 
@@ -301,10 +301,77 @@ abc()
 // console.log(ans)
 
 
+
+//know predefined as well as longer approach for question
+//wap to reverse the number 
+//know basics for programs
+//when to use arrow function and when to use normal
+//AJAX vs fetch, which is better , syntaxes of each 
+//what is module , why we require module ,way to define module, how to import and export multipe value , what are alternate , can you creat your own module
+//have more examples for oops concepts
+//see below code
+// function obj1(surname){
+//     this.name = "something";
+//     this.surname = "newnwnw";
+//     greet  = function(){
+//         console.log("hello " + this.name + this.surname+" here ");
+//     }
+// }
+
+
+// function obj2(){
+//     this.name = "something else";
+//     this.surname = surname;
+// }
+
+// // obj1.greet.call(obj2);
+// obj1.greet();
+
+
+// console.log(obj1,obj2);
+
+
+
+
+
+
+
+//object.freeze
+//diffrence with constant
+// Function.prototype.bind
+
+// class xyz{
+//     constructor(name,address){
+//         this.name = name;
+//         this.address = address;
+//     }
+// }
+
+// function abc2(name,address){
+//     this.name = name;
+//     this.address = address;
+// }
+
+// console.log("prototype",abc.__proto__);
     
-    
-    
-   
+
+// let o1={
+//     name:"Utkarsh",
+//     greet : function(){
+//         console.log("hi my name is " + this.name);
+//     }
+// }
+
+// let o2={
+//     name:"new name ",
+
+// }
+
+// var abcd = o1.greet.bind("o2");
+
+// abcd();
+
+
 
 
 

@@ -17,7 +17,7 @@ tr:hover{
   background-color: lightsalmon;
 }
 
-#logInForm ,#signupForm{
+#logInForm ,#signUpForm{
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -37,7 +37,7 @@ tr:hover{
 #container,#personalData{
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   align-items: center;
 }
 

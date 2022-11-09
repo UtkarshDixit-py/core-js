@@ -105,11 +105,38 @@ let pesonalData = document.querySelector('#personalData');
 let logInForm = document.querySelector('#logInForm');
 
 logInBtn.addEventListener('click',()=>{
-
-    
-    
     pesonalData.style.display = "flex"
     logInForm.style.display = "none"
 })
+
+//SIGNUP-------------
+let signUpForm = document.querySelector("#signUpForm")
+let [newName,newEmail,newPassword] = document.querySelectorAll(".signUpData");
+let[admin,user] = document.querySelectorAll(".type");
+
+let signUpBtn = document.querySelector("#signupBtn");
+
+signUpBtn.addEventListener('click',()=>{
+
+    //authenticate mail and password
+    //check if alteast ine check box is checked
+
+    let user={};
+    console.log(newName.value,newEmail.value,newPassword.value);
+    user.name=newName.value;
+    user.email=newEmail.value;
+    user.password = newPassword.value;
+    if(admin.checked===true){
+        user.type = "admin"
+    }else{
+        user.type = "user"
+    }
+    console.log(user);
+
+    signUpForm.style.display="none";
+    logInForm.style.display="flex";
+
+})
+
 
 

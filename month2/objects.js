@@ -3,12 +3,13 @@ const person ={
     company : "full creative",
 
     introduction(){
-        console.log("hello")
+        console.log("hello----first")
     }
 }
 
 console.log(person["name"])
 console.log(person.name)
+console.log(person.introduction());
 
 person.age = 22;
 
@@ -328,3 +329,28 @@ with(example){
     console.log(eg);
     console.log(ab);
 }
+
+//merging two objects
+
+let man = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    ssn: '123-456-2356'
+};
+
+
+let job = {
+    jobTitle: 'JavaScript Developer',
+    location: 'USA'
+};
+
+let emp = {
+    ...man,
+    ...job
+}
+
+let emp2 = Object.assign(person,job);
+
+console.log(emp,"----------")
+
