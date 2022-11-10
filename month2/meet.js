@@ -309,6 +309,8 @@ abc()
 //AJAX vs fetch, which is better , syntaxes of each 
 //what is module , why we require module ,way to define module, how to import and export multipe value , what are alternate , can you creat your own module
 //have more examples for oops concepts
+
+
 //see below code
 // function obj1(surname){
 //     this.name = "something";

@@ -28,7 +28,7 @@ function person(name){
     },1000);
 }
 
- person("utkarsh");
+ new person("utkarsh");
 
 console.log("---------------------");
 
@@ -40,8 +40,28 @@ console.log("---------------------");
     },1000);
  }
  
-human("utkars2")
+new human("utkars2")
 
+// ES5
+var objf = {
+    id: 42,
+    counter: function counter() {
+      setTimeout(function() {
+        console.log(this.id);
+      }.bind(this), 1000);
+    }
+  };
+
+
+  // ES6
+var obj2f = {
+    id: 42,
+    counter: function counter() {
+      setTimeout(() => {
+        console.log(this.id);
+      }, 1000);
+    }
+  };
 
 
 

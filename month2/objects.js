@@ -164,6 +164,26 @@ var calling = greeting.bind(obj1)
 
 greeting.apply(obj1,["56","full"])
 
+
+function objj1(){
+    this.n = "name1";
+    this.surname = "surname1";
+    this.greet  = function(hometown,pincode){
+        console.log("hello " + this.n +" "+ this.surname+" here " + "from " + hometown + pincode);
+    }
+}
+
+
+function objj2(){
+    this.n = "name2";
+    this.surname = "surname2";
+}
+
+
+var o1 = new objj1();
+var o2  = new objj2();
+o1.greet.call(o2,"chandigarh","140603");
+
 // Number,string and boolean Object
 
 var val =  new Number(50);
@@ -261,6 +281,25 @@ let usaTime = today.toLocaleString("en-US");
 let indiaTime = today.toLocaleString("en-In");
 console.log(usaTime);
 console.log(indiaTime)
+
+ 
+//inheritance
+class p{
+    constructor(name){
+        this.name = name;
+    }
+    greet(){
+        console.log(`HEY ${this.name}`);
+    }
+}
+
+//inheriting from parent
+class Employee extends p{
+
+}
+
+let employee1 = new Employee('utkarsh');
+employee1.greet();
 
 //polymorphism 
 //same function is called many times with different signature
