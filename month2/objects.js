@@ -389,7 +389,57 @@ let emp = {
     ...job
 }
 
-let emp2 = Object.assign(person,job);
+let emp2 = Object.assign(man,job);
 
 console.log(emp,"----------")
 
+
+
+
+//Important object methods 
+console.log("-----Important object methods -----")
+// creating shallow copy
+let target = {
+    a:25,
+    b:24
+}
+let source = {
+    a:11,
+    b:36
+}
+
+let returnedTarget = Object.assign(target,source);
+
+//way to make a deep copy
+let deepCopyObj = JSON.parse(JSON.stringify(man));
+console.log(deepCopyObj);
+
+
+
+//OBJECT.ENTRIES
+const object1 = {
+    a: 'somestring',
+    b: 42
+  };
+
+ console.log(Object.entries(object1)); 
+
+//OBJECT.FREEZE and OBJECT.ISFROZEN
+const randomObj = {
+    prop:12
+};
+
+Object.freeze(randomObj);
+randomObj.prop = 55; //throws and error in strict mode 
+
+console.log(randomObj.prop) //12
+
+console.log(Object.isFrozen(randomObj));
+
+
+//OBJECT.IS
+console.log(0===-0);
+console.log(Object.is(0,-0));
+
+console.log(NaN === Number.Nan);//false
+console.log(Object.is(NaN, Number.NaN)); // true

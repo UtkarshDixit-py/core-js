@@ -339,7 +339,6 @@ abc()
 
 
 //object.freeze
-//diffrence with constant
 // Function.prototype.bind
 
 // class xyz{
