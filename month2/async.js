@@ -225,9 +225,9 @@ p1.then((value) => {
 
 //promise.all 
 console.log("Promise.all",Promise.all([
-    Promise.resolve("working1"),
-    Promise.reject("not working2"),
-    Promise.resolve("working3")
+    Promise.resolve("1resolve"),
+    Promise.reject("2reject"),
+    Promise.resolve("3resolve")
 ]))
 //runs all promises at once and returns an array of all
 //if any promise fails it fails every other promise
@@ -235,16 +235,16 @@ console.log("Promise.all",Promise.all([
 
 //promise.race
 console.log("Promise.race",Promise.race([
-    Promise.resolve("working1"),
-    Promise.reject("not working2"),
-    Promise.resolve("working3")
+    Promise.resolve("1resolve"),
+    Promise.reject("2reject"),
+    Promise.resolve("3resolve")
 ]))
 //returns first resolved or rejected promise
 
 console.log("Promise.allSettled",Promise.allSettled([
-    Promise.resolve("working1"),
-    Promise.reject("not working2"),
-    Promise.resolve("working3")
+    Promise.resolve("1resolve"),
+    Promise.reject("2reject"),
+    Promise.resolve("3resolve")
 ]))
 
 //Runs all promises at once and returns an array of all.
@@ -253,9 +253,9 @@ console.log("Promise.allSettled",Promise.allSettled([
 
 //Promise.any
 console.log("Promise.any",Promise.any([
-    Promise.reject("working1"),
-    Promise.reject("not working2"),
-    Promise.resolve("working3")
+    Promise.reject("1reject"),
+    Promise.reject("2reject"),
+    Promise.resolve("3resolve")
 ]))
 //only returns first fulfilled promise
 
