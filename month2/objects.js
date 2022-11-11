@@ -185,6 +185,47 @@ var o1 = new objj1();
 var o2  = new objj2();
 o1.greet.call(o2,"chandigarh","140603");
 
+
+//why to use call 
+//1) contructors can be chained 
+//eg
+function Product(name,price){
+    this.name = name;
+    this.price = price;
+
+}
+function Food(name,price){
+    Product.call(this,name,price);
+
+    this.category = "food";
+}
+
+function Toy(name,price){
+    Product.call(this,name,price);
+    this.category = "toy"
+}
+
+const cheese = new Food("chips",5);
+console.log(cheese);
+
+
+//why use apply
+//appending one array to another
+
+const arr = ["a","c","b"];
+const elem = [1,2,3,4];
+arr.push.apply(arr,elem);
+
+//using apply in built in function 
+//finding min/max in an array 
+
+const numbers = [5,2,3,4,7];
+
+let max = Math.max.apply(null,numbers);
+//this is same as Math.max(numbers[0],numbers[1],....)
+
+
+
 // Number,string and boolean Object
 
 var val =  new Number(50);
