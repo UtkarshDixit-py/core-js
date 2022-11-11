@@ -157,10 +157,11 @@ function greeting(age,company){
     console.log("hello i am ", this.name , age , company);
 }
 
-greeting.call(obj1, "21" ,"full creative")
-greeting.call(obj2)
+greeting.call(obj1, "21" ,"full creative");
+greeting.call(obj2);
 
-var calling = greeting.bind(obj1)
+
+var calling = greeting.bind(obj1);
 
 greeting.apply(obj1,["56","full"])
 
@@ -423,6 +424,8 @@ const object1 = {
   };
 
  console.log(Object.entries(object1)); 
+ console.log(Object.keys(object1)); 
+ console.log(Object.values(object1)); 
 
 //OBJECT.FREEZE and OBJECT.ISFROZEN
 const randomObj = {

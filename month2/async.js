@@ -275,6 +275,40 @@ async function asyncCall(){
 asyncCall()
 
 
+// AJAX
+
+function run(){
+    var xhr = new XMLHttpRequest();
+    
+    var url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+    xhr.open("GET",url,true);
+
+    xhr.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status ==200){
+            console.log(this.responseText);
+        }
+    }
+    xhr.send();
+}
+
+run()
+
+
+//.fetch for ajax call
+  // Url for the request 
+  var url = 'https://jsonplaceholder.typicode.com/todos/1';
+  
+  
+  fetch(url, { method: 'GET' })
+      .then(Result => Result.json())
+      .then(string => {
+          console.log(string);
+          console.log(string.title);
+      })
+      .catch(error => { console.log(error); });
+
+
 
 
 

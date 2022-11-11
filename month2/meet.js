@@ -373,10 +373,18 @@ abc()
 // abcd();
 
 
+//make library kind of webiste
 
+//make authentication work, sign up log in 
+//admin can add book , delete the book , and entering quantitiy ,author name 
+//user can only read it.
 
+//user can ask for book issue(end goal)
+//call apply bind read mdn again, with examples 
 
+//have syntax , remember syntaxes ,  write syntax when reading about topics , have examples of it.
 
+// how to unfreeze the .freezeed object
 
 
 

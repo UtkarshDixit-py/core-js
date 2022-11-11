@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random Number</h1>
+    <h2>0</h2>
+    <button>generate random number</button>
+    <script>
+        let number = document.querySelector('h2');
+        let btn = document.querySelector('button');
+
+        // number.innerHTML = "56";
+        let arr = [];
+        btn.addEventListener('click',()=>{
+            // number.innerHTML = Math.random() * 99;
+            let randomNumber = Math.random() *99;
+            let floorNumber = Math.floor(randomNumber);
+           
+            
+            arr.push(floorNumber);
+            if(arr.includes(floorNumber)){
+                alert('Number repeated')
+            }
+            number.innerHTML = floorNumber;
+
+        })
+    </script>
+</body>
+</html>
