@@ -68,19 +68,8 @@ function book(title, author) {
     book.prototype.price = null;
     myBook.price = 100;
     console.log(myBook);
-// Constructor------------------------
 
-function createPerson(name){
-    const obj ={};
-    obj.name = name;
-    obj.introduction = function(){
-        console.log(`Hi I am ${this.name}`)
-    }
-    return obj;
-}
 
-const aviObj = createPerson("avi");
-console.log(aviObj.name);
 
 // function createPerson(name){
 //     this.name = name;
@@ -264,15 +253,28 @@ console.log(val3.toString());
 console.log(val3.valueOf()); 
 
 
-//creating object 4 ways
+//creating object 5 ways
 
-//with constructor and new
+//with constructor (with this and new )
 function vehicle(type,color,maker){
     this.type = type;
     this.color = color;
     this.maker = maker;
 }
 let bike = new vehicle("bike","red","suzuki");
+
+//Factory function----------
+function factory(name){
+    return {
+        name : name,
+        console : function (){
+            console.log("FActory function")
+        }
+    }
+}
+
+let product = factory("reliance");
+product.console();
  
 
 //object literals
@@ -325,74 +327,11 @@ console.log(usaTime);
 console.log(indiaTime)
 
  
-//inheritance
-class p{
-    constructor(name){
-        this.name = name;
-    }
-    greet(){
-        console.log(`HEY ${this.name}`);
-    }
-}
 
-//inheriting from parent
-class Employee extends p{
-
-}
-
-let employee1 = new Employee('utkarsh');
-employee1.greet();
 
 //polymorphism 
-//same function is called many times with different signature
-
-class firstClass{
-    add(){
-        console.log("FIRST");
-    }
-}
-
-class secondClass extends firstClass{
-    add(){
-        console.log("Second");
-    }
-}
-class thirdClass extends secondClass{
-    add(){
-        console.log("Last");
-    }
-}
-
-    var ob1 = new firstClass();
-    var ob2 = new secondClass();
-    var ob3 = new thirdClass();
-
-    ob1.add();
-    ob2.add();
-    ob3.add();
 
 //encapsulation -> process of wrapping properties and functions with single unit
-
-class computer {
-    constructor(brand,id){
-        this.brand = brand;
-        this.id = id;
-    }
-    addType(type){
-        this.type = type;
-    }
-
-    getDetails(){
-        console.log("i am a ", this.brand , this.type);
-    }
-}
-
-let laptop = new computer("Asus","55151651");
-laptop.addType('laptop')
-console.log(laptop.getDetails());
-
-
-
 //with
 
 // with(expression)
