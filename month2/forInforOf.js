@@ -1,6 +1,7 @@
 let arr = [55,44,33,22,11]
+
 for(let el of arr){
-    console.log(el)
+    console.log(el);
 }
 
 const student = {
@@ -10,5 +11,6 @@ const student = {
 }
 
 for(let key in student){
-    console.log(key, student);
+    console.log("for in on object", student[key] );
 }
+
