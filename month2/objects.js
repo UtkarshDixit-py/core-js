@@ -326,9 +326,6 @@ let indiaTime = today.toLocaleString("en-In");
 console.log(usaTime);
 console.log(indiaTime)
 
- 
-
-
 //polymorphism 
 
 //encapsulation -> process of wrapping properties and functions with single unit

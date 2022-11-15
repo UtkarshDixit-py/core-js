@@ -116,23 +116,25 @@ let[admin,user] = document.querySelectorAll(".type");
 
 let signUpBtn = document.querySelector("#signupBtn");
 
+let allUsers = [];
+
 signUpBtn.addEventListener('click',()=>{
 
     //authenticate mail and password
     //check if alteast ine check box is checked
 
-    let user={};
+    let userDetail={};
     console.log(newName.value,newEmail.value,newPassword.value);
-    user.name=newName.value;
-    user.email=newEmail.value;
-    user.password = newPassword.value;
+    userDetail.name=newName.value;
+    userDetail.email=newEmail.value;
+    userDetail.password = newPassword.value;
     if(admin.checked===true){
-        user.type = "admin"
+        userDetail.type = "admin"
     }else{
-        user.type = "user"
+        userDetail.type = "user"
     }
     console.log(user);
-
+    allUsers.push(user);
     signUpForm.style.display="none";
     logInForm.style.display="flex";
 

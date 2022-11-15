@@ -384,5 +384,5 @@ abc()
 
 //have syntax , remember syntaxes ,  write syntax when reading about topics , have examples of it.
 
-// how to unfreeze the .freezeed obje
+// how to unfreeze the .freezeed object
 
