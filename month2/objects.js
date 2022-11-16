@@ -423,3 +423,27 @@ console.log(Object.is(0,-0));
 
 console.log(NaN === Number.Nan);//false
 console.log(Object.is(NaN, Number.NaN)); // true
+
+
+//setPrototypeof
+
+//syntax 
+//Object.setPrototypeOf(obj,prototype)
+
+function Human(name,powerLevel){
+    this.name = name;
+    this.powerLevel = powerLevel;
+}
+function SuperHero(name,powerLevel){
+    Human.call(this,name,powerLevel);
+}
+
+Object.setPrototypeOf(SuperHero.prototype,Human.prototype);
+
+Human.prototype.speak = function(){
+    return `${this.name} says hello`;
+}
+const batman = new SuperHero("bruce",10);
+console.log(batman.speak());
+console.log(Object.getPrototypeOf(batman));
+

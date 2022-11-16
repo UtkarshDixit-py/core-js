@@ -1,5 +1,7 @@
 // const { applyEachSeries } = require("async");
 
+const { reject } = require("async");
+
 
 // Synchronous code
 console.log("first");
@@ -66,6 +68,21 @@ promise1
 console.log("----promises-----");
 
 // Promises
+
+//synatx
+// let myPromise = new Promise(function(resolve, reject) {
+//     
+    
+//       resolve(); // when successful
+//       reject();  // when error
+//     });
+
+//     myPromise.then(
+//         function(value) { /* code if successful */ },
+//         function(error) { /* code if some error */ }
+//       );
+
+
 const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
 
 console.log("promise",fetchPromise);
@@ -222,8 +239,15 @@ p1.then((value) => {
 
 
 //promise combinators
+// syntax
+// Promise.combinatorname([
+//     resolved/reject,
+//     resolved/reject,
+//     resolved/reject
+// ])
 
 //promise.all 
+
 console.log("Promise.all",Promise.all([
     Promise.resolve("1resolve"),
     Promise.reject("2reject"),

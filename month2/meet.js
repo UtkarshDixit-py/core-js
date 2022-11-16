@@ -388,13 +388,12 @@ abc()
 
 
 //15-11-22
-//try setting with null and undefined on both set maps as keys 
+//try setting with null and undefined on both set maps as keys -done
 // does map support concurency 
-// how to iterate with arrow functions
+// how to iterate with arrow functions -done 
 //weakmap , weakset ,hashmap what is the diffeence  
 //when to use map and when to use set 
 // setPrototypeOf()
 //ways to create maps and etc 
 //write syntax in commments 
 //ways to iterate in general
-// 
