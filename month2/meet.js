@@ -389,7 +389,7 @@ abc()
 
 //15-11-22
 //try setting with null and undefined on both set maps as keys -done
-// does map support concurency 
+// does map support garbage collection 
 // how to iterate with arrow functions -done 
 //weakmap , weakset ,hashmap what is the diffeence  
 //when to use map and when to use set 

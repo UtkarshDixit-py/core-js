@@ -9,6 +9,7 @@ function isLargeScreen(){
 
 const item ={
     isCollapsed : false,
+    // isCollapsed : true,
 }
 
 //nesting templates
@@ -30,5 +31,37 @@ var classesName = `header ${
     isLargeScreen() ? "" : `icon-${item.isCollapsed ? "expander" : "collapser"}`
 }`;
 console.log(classesName);
+
+
+//tagged templates
+let person = "Mike";
+let age = 28;
+
+//syntax
+// function name(string array, expression1, expression2 ,.....){
+
+// }
+
+function myTag(strings,personExp,ageExp){
+    const str0 = strings[0];
+    const str1 = strings[1];
+    const str2 = strings[2];
+
+    const ageStr = ageExp > 99 ? "older" : "younger";
+
+    return `${ageStr}`;
+}
+
+const output = myTag`That ${person} is ${age}`;
+
+console.log(output);
+
+//will throw error when chained
+// console.log(`Hello``World`); // TypeError: "Hello" is not a function
+
+
+
+
+
 
 
