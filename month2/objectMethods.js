@@ -2,7 +2,7 @@
 console.log("-----Important object methods -----")
 
 
-function objectDotAssign(){
+
     //Object.assign(target object,source object)
 
     //merging two objects
@@ -30,9 +30,9 @@ function objectDotAssign(){
     //way to make a deep copy
     let deepCopyObj = JSON.parse(JSON.stringify(man));
     console.log(deepCopyObj);
-}
 
-function objectdotEntries(){
+
+
     //Object.entries(object);
     const object1 = {
         a: 'somestring',
@@ -42,9 +42,9 @@ function objectdotEntries(){
      console.log(Object.entries(object1)); 
      console.log(Object.keys(object1)); 
      console.log(Object.values(object1)); 
-}
 
-function objectDotFreeze(){
+
+
 // object.freeze(obj)
 const randomObj = {
     prop:12
@@ -57,9 +57,9 @@ console.log(randomObj.prop) //12
 
 console.log(Object.isFrozen(randomObj));
 
-}
 
-function objectDotIs(){
+
+
 //Object.is(obj1,obj2)
 
 console.log(0===-0);
@@ -68,9 +68,9 @@ console.log(Object.is(0,-0));
 console.log(NaN === Number.Nan);//false
 console.log(Object.is(NaN, Number.NaN)); // true
 
-}
 
-function objectDotDefineProperties(){
+
+
     //Object.defineProperties(obj, props)
     const defineObj = {};
     Object.defineProperties(defineObj,{
@@ -86,9 +86,9 @@ function objectDotDefineProperties(){
     
     console.log("defineProperties", defineObj.property1);
     
-}
 
-function objectDotDefineProperty(){
+
+
     // Object.defineProperty(obj, prop, descriptor)
 
     Object.defineProperty(defineObj,"property3",{
@@ -100,9 +100,9 @@ function objectDotDefineProperty(){
     
     console.log(defineObj.property3); //output is 42
     
-}
 
-function objectDotSetPrototypeOf(){
+
+
     //Object.setPrototypeOf(obj,prototype)
     function Human(name,powerLevel){
         this.name = name;
@@ -121,4 +121,4 @@ function objectDotSetPrototypeOf(){
     console.log(batman.speak());
     console.log(Object.getPrototypeOf(batman));
     
-}
+
