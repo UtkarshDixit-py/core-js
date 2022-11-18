@@ -397,3 +397,93 @@ abc()
 //ways to create maps and etc 
 //write syntax in commments 
 //ways to iterate in general
+
+
+//prototypal inheritance
+//check deep copy or shallow copy in case of objects and prototypes , prototypal inheritance
+//can global vriable be accessed inside function of objects, what is the purpose of having funtions inside the object
+//what is readystate4, xhr, ajax req real time example 
+//read more about status codes 
+
+
+//meet with karty 
+// let a = {
+//   "userId": 281,
+//   "id": 1,
+//   "title": "new title",
+//   "completed": false,
+// }
+
+
+
+// let arr =[];
+// function abc(){
+//     for(let i = 0; i < 6;i++){
+//         let myObj = new Object(a);
+//         myObj.userId =  myObj.userId + 1;
+//         console.log(myObj);
+//         arr.push(myObj);
+//     }
+// }
+
+// console.log(arr)
+
+let arr = [
+    {
+        "userId": 1,
+        "id": 1,
+        "title": "aut autem",
+        "completed": false
+    },
+    {
+        "userId": 2,
+        "id": 2,
+        "title": "aut autem",
+        "completed": true
+    },
+    {
+        "userId": 3,
+        "id": 3,
+        "title": "aut autem",
+        "completed": true
+    },
+    {
+        "userId": 4,
+        "id": 4,
+        "title": "aut autem 4",
+        "completed": false
+    },
+    {
+        "userId": 5,
+        "id": 5,
+        "title": "delectus 5",
+        "completed": false
+    },
+    {
+        "userId": 6,
+        "id": 6,
+        "title": "random text",
+    }
+]
+
+// let newArr = arr.filter((item)=>{
+//   return item.title;
+// })
+
+let newArr = arr.map((i)=>{
+    return i.title;
+})
+
+let arr2 = arr.filter((i)=>{
+    // let stringArr = i.title.split("");
+    // let numberArr = [];
+    return stringArr.includes(5);
+})
+
+
+console.log(newArr);
+console.log(arr2);
+
+
+
+
