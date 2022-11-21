@@ -102,6 +102,19 @@ console.log(Object.is(NaN, Number.NaN)); // true
     
 
 
+//Object.fromEntries(iterable)
+//transforms a list of key-value
+// pairs into an object
+const entries = new Map([
+    ['key', 'value'],
+    ['key2', '21']
+  ]);
+
+  const objFrom = Object.fromEntries(entries);
+
+
+  console.log(objFrom);//Object{key:"value","key2":"21"}
+
 
     //Object.setPrototypeOf(obj,prototype)
     function Human(name,powerLevel){

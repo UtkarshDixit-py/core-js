@@ -487,3 +487,12 @@ console.log(arr2);
 
 
 
+const groups = arr.reduce((acc, item) => ({
+    ...acc,
+    [item.title]: [...(acc[item.title] || []), item]
+  }), {});
+  
+  console.log(groups);
+
+
+
