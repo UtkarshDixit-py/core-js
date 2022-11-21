@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas>
+
+    </canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = "green";
+        ctx.fillRect(10,10,150,100);
+       
+        const imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
+        const uint8ClampedArray = imageData.data;
+        console.log(uint8ClampedArray);
+
+
+
+        const fetchPromise = fetch('https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001')
+
+        fetchPromise.then(req=>req.arrayBuffer())
+                    .then(arrayBuffer=>console.log(arrayBuffer))
+
+        
+
+    </script>
+</body>
+</html>
