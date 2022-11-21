@@ -1,3 +1,10 @@
+let arr = Array.apply(null,Array(10));
+arr[0] = "hello";
+arr[1] =  57575757;
+console.log(arr);
+
+
+
 console.log(new Int8Array());
 console.log(new Uint8Array());
 console.log(new Uint8ClampedArray());

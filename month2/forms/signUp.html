@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {background-color: powderblue;}
+
+        #form{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            align-items: center;
+            border: 2px solid red;
+            height: 100vh;
+        }
+         div{
+            margin: 25px;
+            display: inline;
+         }
+        button{
+            width: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="error">
+
+    </div>
+    <form id="form">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        console.log("working")
+        const name = document.getElementById('name');
+        const password = document.getElementById('password');
+        const form = document.getElementById('form');
+        const errorElement = document.getElementById('error')
+
+        form.addEventListener('submit',(e)=>{
+            let messages = [];
+            if(name.value === '' || name.value == null){
+                messages.push('Name is required ')
+            }
+            if(password.value.length <=6 ){
+                messages.push('Password should be longer than 6 characters')
+            }
+            if(messages.length > 0){
+                e.preventDefault();
+                errorElement.innerText = messages.join(', ');
+            }
+            
+        })
+    </script>
+</body>
+</html>

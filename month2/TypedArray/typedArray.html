@@ -19,7 +19,7 @@
         const imageData = ctx.getImageData(0,0,canvas.width,canvas.height);
         const uint8ClampedArray = imageData.data;
         console.log(uint8ClampedArray);
-
+        
 
 
         const fetchPromise = fetch('https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001')
@@ -27,7 +27,7 @@
         fetchPromise.then(req=>req.arrayBuffer())
                     .then(arrayBuffer=>console.log(arrayBuffer))
 
-        
+        //XMLHTTPREQUEST's send method also supports Typed Arrays
 
     </script>
 </body>
