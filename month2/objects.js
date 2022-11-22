@@ -349,3 +349,40 @@ with(example){
 console.log(emp,"----------")
 
 
+// let a = 10;
+
+// let obj={
+//     greet : function(){
+//         console.log(a);
+//     }
+// }
+// obj.greet()
+
+
+function A(){
+    this.name = "cool";
+}
+
+A.prototype = {
+    howCool : function(){
+        return this.name + "er";
+    }
+};
+
+var a1 = new A(),
+    a2 = new A();
+
+a1.name = "hot";
+//line1
+console.log(a1.howCool);
+//line2
+console.log(a2.howCool);
+
+delete A.prototype.howCool;
+
+//line3
+console.log(a1.howCool);
+
+//line4
+var a3 = new A();
+console.log(a3.howCool);

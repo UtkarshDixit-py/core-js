@@ -399,11 +399,11 @@ abc()
 //ways to iterate in general
 
 
-//prototypal inheritance
-//check deep copy or shallow copy in case of objects and prototypes , prototypal inheritance
-//can global vriable be accessed inside function of objects, what is the purpose of having funtions inside the object
+
+//check deep copy or shallow copy in case prototypes --done
+//can global vriable be accessed inside function of objects --done
 //what is readystate4, xhr, ajax req real time example 
-//read more about status codes 
+//read more about status codes
 
 
 //meet with karty 
