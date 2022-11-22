@@ -4,15 +4,24 @@
 
 function uinque(arr){
     arr.sort()
-    let ans = [];
+    let ans = {};
     for(let i = 0 ; i < arr.length -1 ; i++){
-        if(ans.includes(arr[i])) continue;
+        if(ans[arr[i]]) {
+            ans[arr[i]]++;
+        }
 
-        else ans.push(arr[i]);
+        else {
+            ans[arr[i]] = 1;
+        }
     }
-    return ans.length;
+    return ans;
 }
 console.log(uinque([1,1,2,2,3,7,8,8,4,4,5,6]));
+
+
+
+
+
 
 
 
