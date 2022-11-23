@@ -306,9 +306,13 @@ function run(){
     
     var url = 'https://jsonplaceholder.typicode.com/todos/1';
 
-    xhr.open("GET",url,true);
+    xhr.open("GET",url,true); //default value is true
 
     xhr.onreadystatechange = function(){
+        // this.readyState == 1 means request hasn't been sent yet
+        //this.readyState == 2 means req is sent but we have not recieved anything yet
+        //this.readyState == 3 means we have got some part of the response
+        // this.readyState == 4 means we have got complete response
         if(this.readyState == 4 && this.status == 200){
             console.log(this.responseText);
         }

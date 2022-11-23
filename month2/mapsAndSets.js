@@ -72,13 +72,14 @@ let john = { name : "John"};
 // console.log(myMap);
 
 let myWeakMap = new WeakMap()
+// keys(), values(), entries() does not work on weakmap
 
 //weakmap.set(key(must be object),value)
 myWeakMap.set(john,"random");
 
 john = null;
 
-console.log(WeakMap)
+console.log("line 81",WeakMap)
 
 
 let visited = new WeakSet();

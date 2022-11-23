@@ -496,3 +496,5 @@ const groups = arr.reduce((acc, item) => ({
 
 
 
+//segregate duplicate and unique
+//do more methods in array, try variations of same questions

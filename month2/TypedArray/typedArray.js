@@ -8,6 +8,8 @@ console.log(arr);
 console.log(new Int8Array());
 console.log(new Uint8Array());
 console.log(new Uint8ClampedArray());
+console.log(new  Float64Array());
+
 
 
 

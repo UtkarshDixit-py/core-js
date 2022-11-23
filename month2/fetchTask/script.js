@@ -133,7 +133,7 @@ signUpBtn.addEventListener('click',()=>{
     }else{
         userDetail.type = "user"
     }
-    console.log(user);
+    console.log(userDetail);
     allUsers.push(user);
     signUpForm.style.display="none";
     logInForm.style.display="flex";
