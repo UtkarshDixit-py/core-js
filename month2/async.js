@@ -92,6 +92,18 @@ fetchPromise.then((res)=>{
     jsonPromise.then((data)=>console.log(data))
     })
 
+    //fetch API extendded
+    // fetch('url', {
+    //     Method: 'POST',
+    //     Headers: {
+    //       Accept: 'application.json',
+    //       'Content-Type': 'application/json'
+    //     },
+    //     Body: body,
+    //     Cache: 'default'
+    //   })
+      
+
 
 //Consuming  create order promise
 

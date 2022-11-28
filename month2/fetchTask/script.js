@@ -26,13 +26,12 @@ function saveData(data){
          window.localStorage.setItem("list",JSON.stringify(data));
 
     }
-    console.log(window.localStorage);
+    console.log("local storage" , JSON.parse(window.localStorage.list));
 }
 
 
 function displayData(data){
-
-    console.log(data)
+    // console.log(data)
    
     let table = document.querySelector('table');
     let headerRow = document.createElement('tr');
@@ -64,7 +63,7 @@ function displayData(data){
 }
 
 function displayAllData(elem){
-    console.log(elem)
+    // console.log(elem)
     let tableRow = document.createElement('tr'); // create one table row element and setting its inner html as json response
     tableRow.id = elem.id;
     // <td>${elem.imageUrl}</td>
@@ -100,6 +99,9 @@ function deleteRow(id){
      }  
 }
 
+function addUser(){
+
+}
 let logInBtn = document.querySelector('#loginBtn');
 let pesonalData = document.querySelector('#personalData');
 let logInForm = document.querySelector('#logInForm');
@@ -135,8 +137,8 @@ signUpBtn.addEventListener('click',()=>{
     }
     console.log(userDetail);
     allUsers.push(user);
-    signUpForm.style.display="none";
-    logInForm.style.display="flex";
+    // signUpForm.style.display="none";
+    // logInForm.style.display="flex";
 
 })
 
