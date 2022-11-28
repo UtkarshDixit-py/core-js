@@ -12,6 +12,7 @@ function abc(arr,k){
             subArray.push(arr[i]);
             console.log("i------",i)
         }
+        i++;
         ansArr.push(subArray);
        
     }

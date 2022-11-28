@@ -33,4 +33,14 @@ console.log(arr.slice(2),"slice"); //slice
 arr.push(55); //push
 console.log(arr)
 
+//check if obj is an array
+
+let arr1 = [5,6,8,7];
+let obj = {
+    name : "utkarsh"
+}
+
+console.log(Array.isArray(arr1));
+console.log(Array.isArray(obj));
+
 

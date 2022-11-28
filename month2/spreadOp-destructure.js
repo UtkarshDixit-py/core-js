@@ -28,6 +28,6 @@ const {i:z ,j:q} = obj;
 console.log(z);
 console.log(q);
 
-// binding and assignment ?
+
 
 

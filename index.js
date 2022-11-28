@@ -239,4 +239,42 @@
 // let b = 15;
 // const c = 20;
 
+function Vehicle(name,wheels){
+    this.name = name;
+    this.wheels = wheels;
+    
+    this.greet = function(){
+      console.log("I am your new vehicle");
+    }
+  }
+  
+  let bike = new Vehicle("honda",2);
+  
+  console.log(bike.__proto__);
+  console.log(Vehicle.prototype);
+
+
+  function Human(name,level){
+    this.name = name;
+    this.level = level;
+  }
+  function SuperHero(name,level){
+    Human.call(this,name,level);
+  }
+
+  Object.setPrototypeOf(SuperHero.prototype,Human.prototype);
+
+  Human.prototype.speak = function(){
+    return `hey i am ${this.name}`
+  }
+
+  SuperHero.prototype.fly = function(){
+    return `see ${this.name} can fly`
+  }
+
+  let superman = new SuperHero('clark',3);
+
+  console.log(SuperHero.prototype);
+  console.log(superman.speak());
+  console.log(superman.fly());
 

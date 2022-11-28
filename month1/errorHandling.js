@@ -61,7 +61,8 @@ try{
        
     }
     console.log(user.name);
-}catch(e){
+}
+catch(e){
     console.log("JSON user defined Error Error" + e.name);
 }
 
