@@ -100,7 +100,7 @@ function deleteRow(id){
 }
 
 function addUser(){
-
+    
 }
 let logInBtn = document.querySelector('#loginBtn');
 let pesonalData = document.querySelector('#personalData');

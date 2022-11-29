@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #url,#body{height: 50px; width: 200px;}
+    </style>
+</head>
+<body>
+    <h4>Insert URL here</h4>
+    <input type="text" id="url">
+    <h4>Request Body</h4>
+    <input type="text"  id="body">
+    <h4>Select Type of request</h4>
+    <div id="reqType">
+        <input type="radio" name="Req" id="GET">GET
+        <input type="radio" name="Req" id="POST">POST
+        <input type="radio" name="Req" id="PUT">PUT
+        <input type="radio" name="Req" id="PATCH">PATCH
+        <input type="radio" name="Req" id="DELETE">DELETE
+    </div>
+    <button id="sendReq">send request</button>
+    <!-- <h4>Response</h4>
+    <div id="response">
+
+    </div> -->
+</body>
+<script>
+
+    let sendReq = document.getElementById('sendReq');
+    let selectedReq, url;
+   function getReqType(){
+        var ele = document.getElementsByName('Req');
+        for(let i = 0; i< ele.length; i++){
+            if(ele[i].checked){
+                selectedReq = ele[i].id;
+            }
+        }
+        console.log(selectedReq);
+    }
+
+    function getUrl(){
+        let urlInput = document.getElementById('url');
+        url = urlInput.value;
+        console.log(url)
+    }
+
+    sendReq.addEventListener('click',()=>{
+        getReqType();
+        getUrl();
+
+       fetch(url, {
+        Method: `${selectedReq}`,
+        Headers: {
+          Accept: 'application.json',
+          'Content-Type': 'application/json'
+        },
+        // Body: body,
+      }).then((res)=>res.json())
+        .then((data=>console.log(data)))
+    })
+
+</script>
+</html>
