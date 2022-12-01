@@ -50,9 +50,9 @@
     }
 
     function getBody(){
-        // let req = document.getElementById('body');
-        // reqBody = req.value;
-        console.log("reqBody");
+        let req = document.getElementById('body');
+        reqBody = req.value;
+        console.log(typeof reqBody);
     }
     sendReq.addEventListener('click',()=>{
         getBody();
@@ -63,10 +63,10 @@
        fetch(url, {
         Method: `${selectedReq}`,
         Headers: {
-          Accept: 'application.json',
+        //   Accept: 'application.json',
           'Content-Type': 'application/json'
         },
-        Body: reqBody,
+        Body: JSON.stringify(reqBody),
       }).then((res)=>res.json())
         .then((data=>console.log("Response data",data)))
     })
