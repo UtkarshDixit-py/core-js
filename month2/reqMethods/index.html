@@ -13,7 +13,7 @@
     <h4>Insert URL here</h4>
     <input type="text" id="url">
     <h4>Request Body</h4>
-    <input type="text"  id="body">
+    <input type="text" id="body">
     <h4>Select Type of request</h4>
     <div id="reqType">
         <input type="radio" name="Req" id="GET">GET
@@ -31,7 +31,8 @@
 <script>
 
     let sendReq = document.getElementById('sendReq');
-    let selectedReq, url;
+   
+    let selectedReq, url,reqBody;
    function getReqType(){
         var ele = document.getElementsByName('Req');
         for(let i = 0; i< ele.length; i++){
@@ -39,18 +40,25 @@
                 selectedReq = ele[i].id;
             }
         }
-        console.log(selectedReq);
+        // console.log(selectedReq);
     }
 
     function getUrl(){
         let urlInput = document.getElementById('url');
         url = urlInput.value;
-        console.log(url)
+        // console.log(url)
     }
 
+    function getBody(){
+        // let req = document.getElementById('body');
+        // reqBody = req.value;
+        console.log("reqBody");
+    }
     sendReq.addEventListener('click',()=>{
+        getBody();
         getReqType();
         getUrl();
+        
 
        fetch(url, {
         Method: `${selectedReq}`,
@@ -58,10 +66,25 @@
           Accept: 'application.json',
           'Content-Type': 'application/json'
         },
-        // Body: body,
+        Body: reqBody,
       }).then((res)=>res.json())
-        .then((data=>console.log(data)))
+        .then((data=>console.log("Response data",data)))
     })
+
+
+// let objNew = {
+// a: {
+//         b: {
+//             c: 5,
+//         },
+//     },
+// };
+
+// objClone = Object.assign({}, objNew);
+// console.log("assign 1 ", objClone);
+// objNew.a.b.c = 10;
+// a = 10;
+// console.log(objClone);
 
 </script>
 </html>
