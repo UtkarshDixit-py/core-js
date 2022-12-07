@@ -66,7 +66,7 @@ searchBar.onkeyup = function(){
             .then((data)=>{
                 showData(data)
             })
-            .catch(err=>console.log(err))
+            .catch(err=>console.log(err));
     }
 }
 
@@ -81,7 +81,7 @@ function showData(data){
         nameList.innerHTML = nameList.innerHTML + 
         `<li id="listItem">
         <h2>${data.results[i].name}</h2>
-        <h3>powerstats</h3>
+        <h3>Powerstats</h3>
         <b>Speed</b>
         <p>${data.results[i].powerstats.speed}</p>
         <b>Power</b>

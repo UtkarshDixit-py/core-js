@@ -11,9 +11,6 @@ console.log(new Uint8ClampedArray());
 console.log(new  Float64Array());
 
 
-
-
-
 const typedArray  = new Int8Array(10);
 typedArray[0] = 32;
 console.log(typedArray);
