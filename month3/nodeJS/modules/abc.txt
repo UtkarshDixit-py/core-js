@@ -1,0 +1,1 @@
+using nodejs to write in another file(writeFileSync)using append function from node
