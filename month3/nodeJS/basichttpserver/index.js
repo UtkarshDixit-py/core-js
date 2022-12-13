@@ -19,8 +19,6 @@ function requestHandler(req,res){
             break;
         default :
             filePath = './404.html'
-           
-
     }
 
     fs.readFile(filePath,function(err,data){
