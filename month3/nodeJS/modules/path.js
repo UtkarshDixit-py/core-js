@@ -14,3 +14,5 @@ console.log(name);
 let fileName = path.basename(path.join(__dirname,"abc.js"));
 console.log(fileName);
 
+
+

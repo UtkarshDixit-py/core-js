@@ -3,16 +3,15 @@ let items = ["sandwhich","hamburger(nv)","chicken salad(nv)","soup"];
 
 let view = items;
 
-window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
-  });
-  
-
-
 let ul = document.createElement("ul");
 ul.setAttribute('id',"myList");
 var container = document.getElementById('container');
 
+
+
+window.addEventListener("load", (event) => {
+    
+  });
 
 for(let i = 0; i < view.length ;i++){
     var li = document.createElement('li');
@@ -32,11 +31,12 @@ let btn = document.getElementById("filterBtn");
 let checkBoxArr = document.querySelectorAll(".filter");
 let ans;
 console.log(checkBoxArr[0].value);
+let arr=[]
 
 btn.addEventListener("click",()=>{
-    for(let i = 0;i < checkBox.length;i++){
-        if(checkBox[i].checked){
-            ans = checkBox[i].value
+    for(let i = 0;i < checkBoxArr.length;i++){
+        if(checkBoxArr[i].checked){
+            ans = checkBoxArr[i].value
         }
     }
     console.log(ans)
@@ -46,6 +46,12 @@ btn.addEventListener("click",()=>{
     }
     else view = document.querySelectorAll(".nonveg")
     console.log(view)
+    //console filtered 
+    for(let i = 0;i <view.length;i++){
+        console.log("ans",view[i].innerText)
+        arr.push(view[i].innerText);
+        console.log(arr)
+    }
 })
 
 
