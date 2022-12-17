@@ -2,12 +2,9 @@
 
 
 class GreetingMessage extends HTMLElement {
-	
     constructor(){
         super();
-
         console.log("Constructed", this);
-
          // Render HTML
 	this.innerHTML =
     `<p>
@@ -15,9 +12,6 @@ class GreetingMessage extends HTMLElement {
     </p>
     <div class="message" aria-live="polite"></div>`;
     }
-
-   
-
     connectedCallback(){
         console.log('connected',this);
     }

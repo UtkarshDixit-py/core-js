@@ -50,7 +50,11 @@ btn.addEventListener("click",()=>{
     for(let i = 0;i <view.length;i++){
         console.log("ans",view[i].innerText)
         arr.push(view[i].innerText);
+
         console.log(arr)
+
+        elem.style.display = "none";
+        
     }
 })
 

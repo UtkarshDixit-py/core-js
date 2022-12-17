@@ -46,6 +46,17 @@
     console.log("foo2 returns:");
     console.log(foo2());
     
+
+//--------------------------------------------
+    //show in UI
+
+//Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
+//try with display none with list task
+//sonar lint
+//more advantages of webpack
+//webpack plugins names 
+//gulp,webpack, grunt, what is the difference between these
+//dependencies vs devdependencies
     
     
     

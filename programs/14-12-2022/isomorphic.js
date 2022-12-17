@@ -1,4 +1,4 @@
-// kill bill - true 112
+// kill bill - true 
 // foo bar - false
 // aabc kkqa - true
 
