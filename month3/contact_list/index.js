@@ -5,6 +5,7 @@ const app = express();
 
 
 app.get('/',function(req,res){
+    console.log(req)
     res.send('express is running')
 })
 

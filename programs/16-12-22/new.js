@@ -10,18 +10,12 @@ function abc(str,words){
 
 let wordArr = words.split(" ");
 let valueArr=[];
-let ans;
+
 
 if(str.length !== wordArr.length) return false
 let obj = {};
 
 for(let i = 0 ; i < str.length ;i++){
-
-    // for(let j = 0 ; j < wordArr.length;i++){
-            
-    // }
-
-
     if(obj[str[i]]){
         
         // obj[str[i]] =  obj[str[i]] +1;
