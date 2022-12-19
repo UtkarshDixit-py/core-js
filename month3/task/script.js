@@ -9,9 +9,7 @@ var container = document.getElementById('container');
 
 
 
-window.addEventListener("load", (event) => {
-    
-  });
+
 
 for(let i = 0; i < view.length ;i++){
     var li = document.createElement('li');
@@ -41,19 +39,20 @@ btn.addEventListener("click",()=>{
     }
     console.log(ans)
 
-    if(ans==="veg"){
+    if(ans!=="veg"){
         view = document.querySelectorAll(".veg");
     }
     else view = document.querySelectorAll(".nonveg")
     console.log(view)
     //console filtered 
     for(let i = 0;i <view.length;i++){
-        console.log("ans",view[i].innerText)
-        arr.push(view[i].innerText);
+        // console.log("ans",view[i].innerText)
+        // arr.push(view[i].innerText);
 
-        console.log(arr)
+        // console.log(arr)
+        view[i].style.display = "none"
 
-        elem.style.display = "none";
+        // elem.style.display = "none";
         
     }
 })
