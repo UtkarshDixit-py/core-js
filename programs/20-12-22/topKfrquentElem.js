@@ -37,8 +37,5 @@ console.log(abc([10,10,10,2,2,3,3,3,3,3,3,3],2));
 // REPL in nodejs
 
 
-//know how to configure webpack for nodejs
-//what is the prpose of express js
-//body parser 
-//commonly used library in nodejs
+
 

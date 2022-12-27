@@ -67,6 +67,8 @@ const event = new EventEmitter();
 // event.once('print',()=>{
 //     console.log("first callback")
 // }) 
+
+
 // event.on('print',()=>{
 //     console.log("firstCallback")
 // })
