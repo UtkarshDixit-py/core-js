@@ -82,7 +82,7 @@ function abc(str){
             ans.push(strArr[i])
         }
     }
-  console.log(ans)
+  console.log(ans.join(" "))
     
 }
 

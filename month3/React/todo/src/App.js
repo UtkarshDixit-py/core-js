@@ -3,6 +3,7 @@ import Input from './components/Input';
 import List from './components/List';
 import Card from './components/Card';
 import { useState } from 'react';
+import Hooks from './components/Hooks';
 
 function App() {
 
@@ -17,8 +18,10 @@ function App() {
     <div >
    <Input handleAdd={handleAdd}/>
     <List list={listArr}/> 
+    <Hooks />
 
     <Card /> 
+    
     
     </div>
   );
