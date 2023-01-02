@@ -8,17 +8,29 @@ const arr = [
     ]
   ];
 
-  function abc(arr){
-    let ans=[];
-    let str = JSON.stringify(arr);
-    for(let i = 0 ; i < str.length;i++){
-        if(str[i] !== '[' & str[i] !== ']' & str[i] !== ',') ans.push(str[i]);
+//   function abc(arr){
+//     let ans=[];
+//     let str = JSON.stringify(arr);
+//     for(let i = 0 ; i < str.length;i++){
+//         if(str[i] !== '[' & str[i] !== ']' & str[i] !== ',') ans.push(str[i]);
 
-        else continue;
-    }
+//         else continue;
+//     }
 
-    console.log(ans)
+//     console.log(ans)
 
+//   }
+
+  function abcRecursion(arr){
+    return arr.reduce((prev,curr)=>{
+        if(Array.isArray(curr)){
+            prev = prev.concat(abcRecursion(curr))
+        }else{
+            prev.push(curr);
+        }
+        return prev;
+    },[])
   }
   
-  abc(arr)
+//   abc(arr)
+  console.log(abcRecursion(arr))
