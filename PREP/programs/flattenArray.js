@@ -21,6 +21,19 @@ const arr = [
 
 //   }
 
+
+  function flatArray(arr){
+    let ans = [];
+    for(let i of arr){
+        if(Array.isArray(i)) {
+            ans.push(...flatArray(i))
+        }else{
+            ans.push(i);
+        }
+    }
+    return ans;
+  }
+  
   function abcRecursion(arr){
     return arr.reduce((prev,curr)=>{
         if(Array.isArray(curr)){
@@ -31,6 +44,7 @@ const arr = [
         return prev;
     },[])
   }
-  
+
 //   abc(arr)
   console.log(abcRecursion(arr))
+  console.log(flatArray(arr))
