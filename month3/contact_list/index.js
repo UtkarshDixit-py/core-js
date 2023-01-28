@@ -1,10 +1,14 @@
 const express = require('express');
+const path  = require('path');
 const port = 8000;
 
 const app = express(); 
 const userRoute = require("./routes/users");
 const profileRoute = require("./routes/profile");
 const errorRoute = require("./routes/error");
+
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname, 'views'))
 
 app.use('/users',userRoute);
 app.use('/profile',profileRoute);
@@ -15,18 +19,6 @@ app.get('/',function(req,res){
     res.send('express is running')
 })
 
-// app.get('/users',function(req,res){
-//     // console.log()
-//     res.send('get req on /users')
-// })
-
-// app.get('/profile',function(req,res){
-//     res.send('get req on /profile')
-// })
-
-// app.get('*',function(req,res){
-//     res.send("error 404 page not found")
-// })
 
 
 
