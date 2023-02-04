@@ -14,6 +14,21 @@ app.use('/users',userRoute);
 app.use('/profile',profileRoute);
 // app.use("*",errorRoute);
 app.use(express.urlencoded())
+app.use(express.static('assets'))
+
+//middleware 1
+app.use(function(req,res,next){
+    req.myName = "Utkarsh";
+    next();
+})
+
+//middleware 2
+app.use(function(req,res,next){
+    console.log("from controller 2", req.myName);
+    next()
+})
+
+
 
 var myList = [
     {
@@ -45,8 +60,9 @@ var myList = [
 ]
 
 app.get('/',function(req,res){
-    console.log(req)
+    console.log("from get / ",req.myName)
     // res.send('express is running')
+
    return res.render('home',{
         title : "Contact List",
         contact_list : myList

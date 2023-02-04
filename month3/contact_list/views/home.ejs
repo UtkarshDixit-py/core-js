@@ -7,20 +7,30 @@
     <title>
         <%= title %>
     </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/home.css">
+
 </head>
 <body>
-    <h1>Contact List</h1>
-    <ul>
+    
+    <h1 id="page_heading">
+        <i class="fas fa-address-book"></i>
+        Contact List
+    </h1>
+    <ul id="contact_list">
         <% for(let i of contact_list) {%>
-            <p><%=i.name%></p>
-            <p><%=i.contact%></p>
+            <li id="contact_item">
+                <p><%=i.name%></p>
+                <p><%=i.contact%></p>
+            </li>
         <%}%>
     </ul>
 
-    <form action="/create-contact" method="post">
+    <form action="/create-contact" method="post" id="form">
         <input type="text" name="name" placeholder="NAME" reqired>
         <input type="number" name="contact" id="" placeholder="CONTACT NUMBER" required>
         <button type="submit">ADD</button>
     </form>
+    <script type="text/javascript" src="/js/home.js"></script>
 </body>
 </html>
