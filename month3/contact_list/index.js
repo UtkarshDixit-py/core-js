@@ -1,5 +1,6 @@
 const express = require('express');
 const path  = require('path');
+const db = require('./config/mongoose')
 const port = 8000;
 
 const app = express(); 
@@ -33,27 +34,27 @@ app.use(function(req,res,next){
 var myList = [
     {
         name:"utkarsh",
-        contact:"85858585"
+        contact:"858585851"
 
     },
     {
         name:"deep work",
-        contact:"85858585"
+        contact:"858585852"
 
     },
     {
         name:"tony stark",
-        contact:"851118585"
+        contact:"8511185853"
 
     },
     {
         name:"bruce wayne",
-        contact:"85858585"
+        contact:"858585854"
 
     },
     {
         name:"johny depp",
-        contact:"92858585"
+        contact:"928585856"
 
     },
 
@@ -81,6 +82,18 @@ app.post('/create-contact',function(req,res){
    return res.redirect('back')
 })
 
+app.get('/delete-contact/',function(req,res){
+    // /delete-contact/:phone
+    // console.log(req.params);
+
+    console.log(req.query);
+
+   let updatedList =  myList.filter((item)=>item.contact!=req.query.phone);
+   myList = updatedList;
+
+   console.log(updatedList)
+   return res.redirect('back')
+})
 
 
 

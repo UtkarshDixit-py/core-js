@@ -45,3 +45,7 @@ button{
     width: 100px;
     margin: 15px;
 }
+
+#deleteIcon{
+    all: unset;
+}
