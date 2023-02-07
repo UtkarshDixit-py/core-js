@@ -21,8 +21,8 @@
         <% for(let i of contact_list) {%>
             <li id="contact_item">
                 <p><%=i.name%></p>
-                <p><%=i.contact%></p>
-                <a id ="deleteIcon" href="/delete-contact/?phone=<%= i.contact %>">
+                <p><%=i.phone%></p>
+                <a id ="deleteIcon" href="/delete-contact/?id=<%= i._id %>">
                     <i class="fa-solid fa-trash"></i>
                 </a>
               
